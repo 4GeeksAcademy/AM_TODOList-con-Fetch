@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f4f8;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#contenedor-todo {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  transition: box-shadow 0.3s;
+}
+
+#contenedor-todo:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#contenedor-todo h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.4em;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+#contenedor-todo h1 span {
+  display: block;
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-top: 0.4em;
+  text-align: center;
+}
+
+.area-entrada {
+  display: flex;
+  margin-top: 1.8em;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.75em 1em;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.2);
+}
+
+button {
+  padding: 0.75em 1.4em;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+ul {
+  list-style: disc;
+  margin-top: 2em;
+  padding-left: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ecf0f1;
+  margin-bottom: 1em;
+  height: 50px;
+  padding: 0 1em;
+  border-radius: 8px;
+  transition: box-shadow 0.2s;
+}
+
+.etiqueta-tarea {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+/* Botón borrar X simple */
+.borrar-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.borrar-btn:hover {
+  color: red;
+  background-color: rgba(0,0,0,0.15);
+}
+
+.borrar-btn:focus {
+  outline: none;
+  background-color: rgba(0,0,0,0.15);
+}
+
+/* Botón limpiar todo */
+.limpiar-btn {
+  margin-top: 2em;
+  width: 100%;
+  padding: 0.8em;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.limpiar-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
